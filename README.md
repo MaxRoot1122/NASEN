@@ -1,16 +1,16 @@
-# NASEN × Flux Labs — Mobile Audit Proposal
+# NASEN — Mobile Site Audit
 
-Customized website-upgrade proposal for [nasen.org](https://nasen.org/), built from `Templateindex.html`.
-
-## Files
-
-- `index.html` — Client-facing audit & upgrade proposal (phone-first findings + before/after mocks)
-- `Templateindex.html` — Original proposal template
-- `assets/nasen-mobile-home.png` — Live capture of nasen.org at 390×844
+One-page phone-first audit of [nasen.org](https://nasen.org/), built from `Templateindex.html` using NASEN brand colors (cyan / teal / orange) and Cervo + Open Sans.
 
 ## Contact
 
-NASEN Buyers Club: **(253) 213-3221**
+NASEN Buyers Club: **(253) 213-3221** · [buyersclub@nasen.org](mailto:buyersclub@nasen.org)
+
+## Files
+
+- `index.html` — Audit page (findings + before/after + contact)
+- `Templateindex.html` — Original proposal template
+- `assets/nasen-mobile-home.png` — Live capture at 390×844
 
 ## Open locally
 
