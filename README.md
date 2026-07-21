@@ -1,6 +1,6 @@
 # NASEN — Mobile Site Audit
 
-One-page phone-first audit of [nasen.org](https://nasen.org/), built from `Templateindex.html` using NASEN brand colors (cyan / teal / orange) and Cervo + Open Sans.
+One-page phone-first audit of [nasen.org](https://nasen.org/), rebuilt to match the live NASEN colorway (cyan `#4ac3e4`, teal `#06597A`, orange `#f36b21`, lime `#cac950`), paper texture, chevron pattern, and Cervo + Open Sans.
 
 ## Contact
 
