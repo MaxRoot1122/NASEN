@@ -1,38 +1,63 @@
-# Repair Cursor (corrupted popup)
+# Repair Cursor (corrupted popup / blank UI / GPU glitches)
 
-One-shot fix for garbled / corrupted Cursor popups. Disables hardware acceleration, sets ANGLE to `gl`, and clears GPU/Electron caches.
+One-shot repair for local Cursor. A cloud agent **cannot** edit your desktop install — run this on your machine after quitting Cursor.
 
-## Before you run
+## Quick start (safe repair)
 
-1. **Save your work**
-2. **Quit Cursor completely** (all windows)
-
-## Run it
-
-### macOS / Linux
-
-```bash
-cd /path/to/nasen
-chmod +x scripts/repair-cursor.sh
-./scripts/repair-cursor.sh
-```
-
-### Windows (PowerShell)
+### Windows
+Double-click: `scripts/repair-cursor.cmd`  
+Or PowerShell:
 
 ```powershell
-cd path\to\nasen
 Set-ExecutionPolicy -Scope Process Bypass
 .\scripts\repair-cursor.ps1
 ```
 
-Then reopen Cursor.
+### macOS
+Double-click: `scripts/repair-cursor.command`  
+Or Terminal:
 
-## What it changes
+```bash
+chmod +x scripts/repair-cursor.sh scripts/repair-cursor.command
+./scripts/repair-cursor.sh
+```
 
-- Writes `%APPDATA%/Cursor/User/argv.json` (or macOS/Linux equivalent) with:
-  - `disable-hardware-acceleration: true`
-  - `use-angle: "gl"`
-- Deletes `GPUCache`, `Code Cache`, `Cache`, `CachedData`
-- Removes corrupted layout key `cursor/editorLayout.auxiliaryBarVisible` from workspace DBs when `sqlite3` is available
+### Linux
 
-A timestamped backup of `argv.json` is saved under `Cursor/repair-backup-*`.
+```bash
+chmod +x scripts/repair-cursor.sh
+./scripts/repair-cursor.sh
+```
+
+Then **reopen Cursor** and **start a new chat**.
+
+## If still broken (full wipe of project UI state)
+
+```bash
+./scripts/repair-cursor.sh --full
+```
+
+```powershell
+.\scripts\repair-cursor.ps1 -Full
+```
+
+This also clears `workspaceStorage` / History (local chats/tabs reset). A backup is saved under `Cursor/repair-backup-*`.
+
+## What the repair does
+
+| Step | Safe | Full |
+|------|------|------|
+| Force-quit Cursor | ✓ | ✓ |
+| Disable hardware acceleration (`argv.json`) | ✓ | ✓ |
+| Set `use-angle: gl` | ✓ | ✓ |
+| Clear GPU / Code / Dawn / Shader / Service Worker caches | ✓ | ✓ |
+| Clear Local + Session Storage | ✓ | ✓ |
+| Remove corrupted layout keys from `state.vscdb` | ✓ | ✓ |
+| Wipe `workspaceStorage` + History | | ✓ |
+
+## After repair
+
+1. Open Cursor
+2. Start a **new** chat (old corrupted chats can keep spawning bad popups)
+3. Avoid **Open Chat as Editor** for now
+4. If needed: reinstall from https://cursor.com/download
