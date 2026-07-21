@@ -12,9 +12,15 @@ NASEN Buyers Club: **(253) 213-3221** · [buyersclub@nasen.org](mailto:buyersclu
 - `Templateindex.html` — Original proposal template
 - `assets/nasen-mobile-home.png` — Live capture at 390×844
 
-## Open locally
+## Download
+
+Grab **[nasen-mobile-audit.zip](nasen-mobile-audit.zip)** — includes `index.html`, template, and assets.
+
+Unzip, then open `index.html` in a browser (or serve the folder):
 
 ```bash
+unzip nasen-mobile-audit.zip
+cd nasen-mobile-audit
 python3 -m http.server 8765
 # then visit http://localhost:8765/
 ```
