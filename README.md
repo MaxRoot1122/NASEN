@@ -8,6 +8,10 @@ Customized website-upgrade proposal for [nasen.org](https://nasen.org/), built f
 - `Templateindex.html` — Original proposal template
 - `assets/nasen-mobile-home.png` — Live capture of nasen.org at 390×844
 
+## Contact
+
+NASEN Buyers Club: **(253) 213-3221**
+
 ## Open locally
 
 ```bash
