@@ -1,5 +1,3 @@
-# Nasen
-# NASEN × Flux Labs — Mobile Site Audit & Proposal
 # NASEN × Flux Labs — What We Can Build
 
 Phone-first audit of [nasen.org](https://nasen.org/) prepared by [Flux Labs](https://fluxlab.agency/). Shows the live mobile breaks — and the website, SEO, and Flux Ops work we can deliver.
@@ -26,3 +24,13 @@ python3 -m http.server 8765
 ```
 
 Or grab **[nasen-mobile-audit.zip](nasen-mobile-audit.zip)**.
+
+## Cursor repair
+
+If Cursor shows corrupted / garbled popups, quit Cursor and run:
+
+- **Windows:** `scripts/repair-cursor.cmd`
+- **macOS:** `scripts/repair-cursor.command`
+- **Linux:** `./scripts/repair-cursor.sh`
+
+Details: [`scripts/REPAIR-CURSOR.md`](scripts/REPAIR-CURSOR.md)
