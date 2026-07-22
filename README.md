@@ -11,10 +11,12 @@ Uses NASEN’s live colorway (cyan `#4ac3e4`, teal `#06597A`, orange `#f36b21`, 
 
 ## Files
 
-- `index.html` — Polished audit + capability showcase
+- [`AUDIT.md`](AUDIT.md) — Organized audit brief (findings → Flux Labs work)
+- `index.html` — Interactive proposal (before/after phone mocks)
 - `Templateindex.html` — Original proposal template
 - `assets/` — Logo + live phone capture
 - `scripts/` — Cursor repair helpers
+- `nasen-mobile-audit.zip` — Downloadable package
 
 ## Preview
 
